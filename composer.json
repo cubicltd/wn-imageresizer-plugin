@@ -1,11 +1,11 @@
 {
-    "name": "toughdeveloper/imageresizer",
-    "type": "october-plugin",
-    "description": "October CMS Plugin to resize and compress images.",
+    "name": "cubic/wn-imageresizer-plugin",
+    "type": "winter-plugin",
+    "description": "Winter CMS Plugin to resize and compress images.",
     "license": "MIT",
-    "website": "https://octobercms.com/plugin/toughdeveloper-imageresizer",
+    "website": "https://github.com/cubicltd/wn-imageresizer-plugin",
     "require": {
-        "composer/installers": "~1.0",
+        "composer/installers": "~1.11",
         "tinify/tinify": "^1.3"
     }
 }

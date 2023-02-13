@@ -1,4 +1,4 @@
-<?php namespace ToughDeveloper\ImageResizer\Models;
+<?php namespace Cubic\ImageResizer\Models;
 
 use Model;
 use Lang;
@@ -8,11 +8,11 @@ use Lang;
  */
 class Settings extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     public $implement = ['System.Behaviors.SettingsModel'];
 
-    public $settingsCode = 'toughdeveloper_imageresizer_settings';
+    public $settingsCode = 'cubic_imageresizer_settings';
 
     public $settingsFields = 'fields.yaml';
 
@@ -31,10 +31,10 @@ class Settings extends Model
 
     public $customMessages = [];
 
-    public function __construct(){
-        $this->customMessages['valid_tinypng_key'] = Lang::get('toughdeveloper.imageresizer::lang.settings.tinypng_invalid_key');
+    public function __construct(array $attributes = []){
+        $this->customMessages['valid_tinypng_key'] = Lang::get('cubic.imageresizer::lang.settings.tinypng_invalid_key');
 
-        parent::__construct();
+        parent::__construct($attributes);
     }
 
     public function beforeValidate()

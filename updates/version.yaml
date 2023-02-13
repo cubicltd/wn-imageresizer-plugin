@@ -21,3 +21,4 @@
     - Adds zh-cn translations - @everyx
     - Spaces in filename are now handled properly - @mauserrifle
 1.4.1: Only attempt to delete temp files if they still exist - @LukeTowers
+1.5.0: Fork, rebrand and fix compatibility with Winter CMS 1.2

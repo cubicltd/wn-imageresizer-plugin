@@ -1,7 +1,7 @@
-<?php namespace ToughDeveloper\ImageResizer;
+<?php namespace Cubic\ImageResizer;
 
 use System\Classes\PluginBase;
-use ToughDeveloper\ImageResizer\Classes\Image;
+use Cubic\ImageResizer\Classes\Image;
 use Validator;
 
 /**
@@ -17,11 +17,14 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'toughdeveloper.imageresizer::lang.plugin.name',
-            'description' => 'toughdeveloper.imageresizer::lang.plugin.description',
-            'author'      => 'Tough Developer',
+            'name'        => 'cubic.imageresizer::lang.plugin.name',
+            'description' => 'cubic.imageresizer::lang.plugin.description',
+            'author'      => 'Cubic Ltd',
             'icon'        => 'icon-picture-o',
-            'homepage'    => 'https://github.com/toughdeveloper/oc-imageresizer-plugin'
+            'homepage'    => 'https://github.com/cubicltd/wn-imageresizer-plugin',
+            'replaces' => [
+                'ToughDeveloper.ImageResizer' => '<1.5.0'
+            ],
         ];
     }
 
@@ -33,9 +36,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'toughdeveloper.imageresizer.access_settings' => [
-                'tab'   => 'toughdeveloper.imageresizer::lang.permission.tab',
-                'label' => 'toughdeveloper.imageresizer::lang.permission.label'
+            'cubic.imageresizer.access_settings' => [
+                'tab'   => 'cubic.imageresizer::lang.permission.tab',
+                'label' => 'cubic.imageresizer::lang.permission.label'
             ]
         ];
     }
@@ -81,12 +84,12 @@ class Plugin extends PluginBase
     {
         return [
             'settings' => [
-                'label'       => 'toughdeveloper.imageresizer::lang.settings.label',
+                'label'       => 'cubic.imageresizer::lang.settings.label',
                 'icon'        => 'icon-picture-o',
-                'description' => 'toughdeveloper.imageresizer::lang.settings.description',
-                'class'       => 'ToughDeveloper\ImageResizer\Models\Settings',
+                'description' => 'cubic.imageresizer::lang.settings.description',
+                'class'       => 'Cubic\ImageResizer\Models\Settings',
                 'order'       => 0,
-                'permissions' => ['toughdeveloper.imageresizer.access_settings']
+                'permissions' => ['cubic.imageresizer.access_settings']
             ]
         ];
     }

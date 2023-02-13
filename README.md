@@ -11,7 +11,7 @@
 <a name="introduction"></a>
 ## Introduction
 
-Resizes an image to the required dimensions. It accepts a string with a file path to the image or a `October\Rain\Database\Attach\File` object (you will have one of these if you have used the attachOne or AttachMany relationship)
+Resizes an image to the required dimensions. It accepts a string with a file path to the image or a `Winter\Storm\Database\Attach\File` object (you will have one of these if you have used the attachOne or AttachMany relationship)
 
 Please note, the not found image can be overwritten via the settings in the admin area.
 
@@ -61,7 +61,7 @@ compress | Whether the image should be compressed or not. Only takes effect when
 The image resizer can also be used easily in PHP, as follows:
 
 ```
-use ToughDeveloper\ImageResizer\Classes\Image;
+use Cubic\ImageResizer\Classes\Image;
 
 $image = new Image('/path/to/image.jpg');
 $image->resize(150, 200, [ 'mode' => 'crop' ]);
